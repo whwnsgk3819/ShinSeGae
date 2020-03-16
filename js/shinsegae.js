@@ -32,31 +32,34 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
     var scrollTop = $(this).scrollTop();
-    var ON = "on";
     var ZERO = 0;
     var EVENT_POINT = 500;
     var RIGHT_ARROW_POINT = 600;
+    var MEMBERSHIP_POINT = 900;
+    var NEW_POINT = 1400;
+    var INSTAGRAM_POINT = 2100;
+    
 
   if(scrollTop >= 50){
-   $('.navigation').addClass(ON);
-   $('.navigation__two').addClass('test');
+   $('.navigation').addClass("on");
+   $('.navigation__two').addClass('on');
   }else{
-       $('.navigation').removeClass(ON);
-       $('.navigation__two').removeClass('test');
+       $('.navigation').removeClass("on");
+       $('.navigation__two').removeClass('on');
   }
  
   
   
   if(scrollTop >= RIGHT_ARROW_POINT){
-   $('.right__arrow').addClass(ON);
+   $('.right__arrow').addClass("on");
   }else{
-  	 $('.right__arrow').removeClass(ON);
+  	 $('.right__arrow').removeClass("on");
   }
   
   if(scrollTop >= ZERO){
-        $('.brand').addClass(ON);
+        $('.brand').addClass("on");
    }else{
-        $('.brand').removeClass(ON);
+        $('.brand').removeClass("on");
    }
    
    if(scrollTop >= EVENT_POINT){
@@ -64,17 +67,17 @@ $(window).scroll(function(){
    }else{
         $('.event').removeClass('on');
    }
-   if(scrollTop >= 900){
+   if(scrollTop >= MEMBERSHIP_POINT){
     $('.membership').addClass('on');
    }else{
         $('.membership').removeClass('on');
    }
-   if(scrollTop >= 1400){
+   if(scrollTop >= NEW_POINT){
     $('.new').addClass('on');
    }else{
         $('.new').removeClass('on');
    }
-   if(scrollTop >= 2100){
+   if(scrollTop >= INSTAGRAM_POINT){
     $('.instagram').addClass('on');
    }else{
         $('.instagram').removeClass('on');
@@ -86,7 +89,7 @@ $(window).scroll(function(){
 
 $(".right__arrow").click(function(){
     $('html, body').animate({
-           scrollTop : ZERO
+           scrollTop : 0
        }, 500);
        return false;
    });
@@ -104,21 +107,3 @@ $(".right__arrow").click(function(){
   	$('#silver').addClass('on').siblings().removeClass('on');
   }
 })
-
-//    var $viptext = $(".membership__vip-text")
-//    var $blackvip = $(".membership__vip-blackvip")
-//    var $black = $(".membership__vip-black")
-//    var $gold = $(".membership__vip-gold")
-//    var $silver = $(".membership__vip-silver")
- 
-
-
-
-//    $viptext.mouseenter(function(){
-//        console.log('enter')
-// 	//$silver.addClass('on').removeClass('membership__vip-blackvip')
-//     })
-//      // $('.viptext').mouseenter(function(){
-//      //      $black.addClass('on').removeClass('on')
-//      // })
- 
