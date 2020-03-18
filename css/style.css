@@ -1178,6 +1178,7 @@ margin-right: 0;
 }
 .navigation__two.on{
   top:80px;
+  height: 260px;
 }
 .navigation__two-wrap{
   margin-left: 160px;
